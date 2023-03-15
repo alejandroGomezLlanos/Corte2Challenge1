@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState , memo} from "react";
 import "./styles.css";
 
-export const Son = ({ numero, increment }) => {
+export const Son = memo(({ numero, increment }) => {
   console.log("again reload...");
   return (
     <button
@@ -13,5 +13,6 @@ export const Son = ({ numero, increment }) => {
       {numero}
     </button>
   );
-};
+}
+)
 export default Son;

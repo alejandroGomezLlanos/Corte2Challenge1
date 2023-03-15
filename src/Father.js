@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState , useCallback} from "react";
 import { Son } from "./Son";
 import "./styles.css";
 
@@ -6,9 +6,10 @@ export const Father = () => {
   const list = [2, 4, 6, 8, 10];
   const [valor, setValor] = useState(0);
 
-  const increment = (num) => {
+  const increment = useCallback( (num) => {
     setValor(valor + num);
-  };
+  },[],
+  )
   return (
     <>
       <div>
